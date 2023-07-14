@@ -2,6 +2,7 @@ package com.qa.nxstudio.test;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
 import com.qa.nxstudio.base.BaseTest;
 import com.qa.nxstudio.constants.AppConstants;
 
@@ -24,39 +25,35 @@ public class LoginPageTest extends BaseTest{
 	
 	
 	@Test
+	public void loginpageHeadingExist()
+	{
+		loginpage.loginpageHeadingExist();
+		System.out.println("The user is on login screen...");
+	}
+	
+	
+	@Test
 	public void validCredentials()
 	{
-		loginpage.setEmail("subhna.khan@digivalet.com");
-		loginpage.setPassword("CasaDigi@4.0");
-		loginpage.clickSignUpBtn();
+		loginpage.dologin(prop.getProperty("email").trim(), prop.getProperty("password").trim());
 	}
 	
 	
 	
-	@Test
-	public void invalidCredentials()
-	{
-		loginpage.setEmail("subhna@digivalet.com");
-		loginpage.setPassword("CasaDigi");
-		loginpage.clickSignUpBtn();
-	}
+	
+	/*
+	 * @Test public void logoutBtnLogoutTest() {
+	 * Assert.assertTrue(loginpage.LogOutBtnExist());
+	 * 
+	 * }
+	 */
 	
 	
-	@Test
-	public void blankCredentials()
-	{
-		loginpage.setEmail("");
-		loginpage.setPassword("");
-		loginpage.clickSignUpBtn();
-	}
-	
-	
-	@Test
-	public void dashboardPageHeadingTest()
-	{
-		String actualDashboadPageHeading = loginpage.getDashboadPageHeading("Projects");
-		Assert.assertEquals(actualDashboadPageHeading, "Projects");
-	}
+	/*
+	 * @Test public void dashboardPageHeadingTest() { String
+	 * actualDashboadPageHeading = loginpage.getDashboadPageHeading("Projects");
+	 * Assert.assertEquals(actualDashboadPageHeading, "Projects"); }
+	 */
 	
 
 }

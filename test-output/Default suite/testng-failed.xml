@@ -6,8 +6,8 @@
       <class name="com.qa.nxstudio.test.LoginPageTest">
         <methods>
           <include name="setUp"/>
+          <include name="loginPageTitleTest"/>
           <include name="teatDown"/>
-          <include name="validCredentials"/>
         </methods>
       </class> <!-- com.qa.nxstudio.test.LoginPageTest -->
     </classes>

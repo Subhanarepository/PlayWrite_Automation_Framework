@@ -7,11 +7,14 @@ public class LoginPage {
 	private Page page;
 	
 	//1.String Locators
+	
+	private String loginPageHeading = "//h1[normalize-space()='Sign in']";
 	private String email = "input[id='login-email-field']";
 	private String password = "input[id='login-password-field']";
 	private String signUp_btn = "button[id='user-login-btn']";
 	private String forgetPassword_btn = "div[id='forgot-password-btn']";
-	private String dashboard_Heading = "div[class='module-heading']";
+	private String dashboard_Heading = "//div[@class='module-heading']";
+	private String logout_btn = "//div[@class='logOut']//*[name()='svg']";
 	
 	
 	//2. Page Constructor
@@ -37,36 +40,33 @@ public class LoginPage {
 		return url;
 	}
 	
-	
-	public void setEmail(String fillEmail)
+	public boolean loginpageHeadingExist()
 	{
+		return page.isVisible(loginPageHeading);
+	}
+	
+	
+	
+	public boolean dologin(String fillEmail, String fillPassword)
+	{
+		System.out.println("App credentials: " + fillEmail + ":" +  fillPassword);
 		page.fill(email, fillEmail);
-	}
-	
-	
-	public void setPassword(String fillPassword)
-	{
 		page.fill(password, fillPassword);
-	}
-	
-	
-	public void clickSignUpBtn()
-	{
 		page.click(signUp_btn);
-		/*
-		 * String heading = page.textContent(dashboard_Heading);
-		 * System.out.println("Dashoard heading is:" +heading); return heading;
-		 */
-	}
+		if(page.isVisible(dashboard_Heading))
+		{
+			System.out.println("User is logged in successfully .....");
+			return true;
+		}
+		return false;
+	} 
 	
 	
 	
-	
-	
-	public String getDashboadPageHeading(String Heading) 
+	public boolean LogOutBtnExist()
 	{
-		String DashboadHeading = page.textContent("dashboard_Heading");
-		System.out.println("Dashboad Heading" +DashboadHeading);
-		return DashboadHeading; 
+		return page.isVisible(logout_btn);
 	}
+	
+
 }

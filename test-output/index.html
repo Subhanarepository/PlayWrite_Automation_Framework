@@ -7,7 +7,7 @@
 
     <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
     <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
-    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="jquery.min.js"></script>
     <script type="text/javascript" src="testng-reports.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type='text/javascript'>
@@ -21,7 +21,8 @@
      -->
   </head>
 
-  <body>    <div class="top-banner-root">
+  <body>
+    <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
@@ -143,6 +144,9 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Demo Suite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;4&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;com.qa.nxstudio.extentreport.listener.ExtentReportListener&quot;/&gt;
+  &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Login&quot; verbose=&quot;4&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.qa.nxstudio.test.LoginPageTest&quot;&gt;
@@ -193,12 +197,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'loginPageTitleTest')
 data.setCell(0, 2, 'com.qa.nxstudio.test.LoginPageTest')
-data.setCell(0, 3, 27);
+data.setCell(0, 3, 47);
 window.suiteTableData['Demo_Suite']= { tableData: data, tableDiv: 'times-div-Demo_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 27 ms</span>
+              <span class="suite-total-time">Total running time: 47 ms</span>
               <div id="times-div-Demo_Suite">
               </div> <!-- times-div-Demo_Suite -->
             </div> <!-- times-div -->
@@ -213,21 +217,17 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Demo_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">5 ignored methods</span>
+            <span class="header-content">3 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
               <span class="ignored-class-name">com.qa.nxstudio.test.LoginPageTest</span>
               <div class="ignored-methods-div">
+                <span class="ignored-method-name">loginpageHeadingExist</span>
+                <br/>
                 <span class="ignored-method-name">loginPageURLTest</span>
                 <br/>
-                <span class="ignored-method-name">blankCredentials</span>
-                <br/>
-                <span class="ignored-method-name">invalidCredentials</span>
-                <br/>
                 <span class="ignored-method-name">validCredentials</span>
-                <br/>
-                <span class="ignored-method-name">dashboardPageHeadingTest</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -246,11 +246,11 @@ return data;
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">loginPageTitleTest</span>
-                <span class="method-start">13753 ms</span>
+                <span class="method-start">11608 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">teatDown</span>
-                <span class="method-start">13793 ms</span>
+                <span class="method-start">12647 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -2,11 +2,15 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Demo Suite" verbose="4">
   
+  <listeners>
+  <listener class-name="com.qa.nxstudio.extentreport.listener.ExtentReportListener" />
+  
+  </listeners>
+  
   <test name="Login">
     <classes>
      	<class name="com.qa.nxstudio.test.LoginPageTest">
-     	
-     	<methods>
+     	<methods> 
 		     <include name="loginPageTitleTest"/>
      	 </methods>
       </class>

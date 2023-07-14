@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="5" total="6" passed="1" failed="0" skipped="0">
+<testng-results ignored="3" total="4" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-07-05T16:20:55 IST" name="Demo Suite" finished-at="2023-07-05T16:21:09 IST" duration-ms="14348">
+  <suite started-at="2023-07-06T19:22:54 IST" name="Demo Suite" finished-at="2023-07-06T19:23:07 IST" duration-ms="13149">
     <groups>
     </groups>
-    <test started-at="2023-07-05T16:20:55 IST" name="Login" finished-at="2023-07-05T16:21:09 IST" duration-ms="14348">
+    <test started-at="2023-07-06T19:22:54 IST" name="Login" finished-at="2023-07-06T19:23:07 IST" duration-ms="13149">
       <class name="com.qa.nxstudio.test.LoginPageTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.qa.nxstudio.test.LoginPageTest@3b6ddd1d]" started-at="2023-07-05T16:20:55 IST" name="setUp" finished-at="2023-07-05T16:21:08 IST" duration-ms="13694" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.qa.nxstudio.test.LoginPageTest@1bd39d3c]" started-at="2023-07-06T19:22:54 IST" name="setUp" finished-at="2023-07-06T19:23:06 IST" duration-ms="11546" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="loginPageTitleTest()[pri:0, instance:com.qa.nxstudio.test.LoginPageTest@3b6ddd1d]" started-at="2023-07-05T16:21:08 IST" name="loginPageTitleTest" finished-at="2023-07-05T16:21:08 IST" duration-ms="27" status="PASS">
+        <test-method signature="loginPageTitleTest()[pri:0, instance:com.qa.nxstudio.test.LoginPageTest@1bd39d3c]" started-at="2023-07-06T19:23:06 IST" name="loginPageTitleTest" finished-at="2023-07-06T19:23:06 IST" duration-ms="47" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginPageTitleTest -->
-        <test-method is-config="true" signature="teatDown()[pri:0, instance:com.qa.nxstudio.test.LoginPageTest@3b6ddd1d]" started-at="2023-07-05T16:21:08 IST" name="teatDown" finished-at="2023-07-05T16:21:09 IST" duration-ms="499" status="PASS">
+        <test-method is-config="true" signature="teatDown()[pri:0, instance:com.qa.nxstudio.test.LoginPageTest@1bd39d3c]" started-at="2023-07-06T19:23:07 IST" name="teatDown" finished-at="2023-07-06T19:23:07 IST" duration-ms="494" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teatDown -->
